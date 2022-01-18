@@ -6,14 +6,15 @@ public class Latihan1 : MonoBehaviour
 {
     const string JUDUL = "Selamat Datang Di Game Tebak-Tebakan";
     const string PERTANYAAN = "Air Apa Yang Bikin Sedih?";
-    public string[] Jawaban;
+    
     // Start is called before the first frame update
     void Start()
     {
         Debug.Log($"{JUDUL} \n {PERTANYAAN}");
-        Debug.Log($"{Jawaban[0]} \n {Jawaban[1]}");
+        Jawaban();
+        
     }
-
+    
     // Update is called once per frame
     void Update()
     {
@@ -25,5 +26,9 @@ public class Latihan1 : MonoBehaviour
         {
             Debug.LogError("Salah");
         }
+    }
+    
+    void Jawaban() {
+        Debug.Log($"A. Air Matcha \n B. Air Hujan");
     }
 }
